@@ -1,7 +1,7 @@
 ---
 title: "Redis"
 date: 2021-12-31T15:43:22-05:00
-draft: true
+draft: false
 ---
 
 Redis ZSet consists of SkipList and HashSet. Two copies of data. SkipList for range, HashSet for get  
