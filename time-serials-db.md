@@ -1,6 +1,6 @@
 Prometheus, InfluxDB  
 
-Timestamp is the primary key  
+* Timestamp is the primary key  
 
 Collecting metrics from Docker  
 Enable endpoint of docker: http://127.0.0.1:9323/metrics  
@@ -29,7 +29,7 @@ engine_daemon_container_actions_seconds_count{action="changes"} 1
 Prometheus stores this kind of metrics every 5 or 15 seconds, 1m... 
 
 Prometheus also emit metrics of itself at http://localhost:9090/metrics  
-quantile 0.25 means 25% (p25), 0.99 means 99% (p99)
+quantile 0.25 means 25% (p25), 0.99 means 99% (p99)   
 E.g. 
 ```
 # HELP go_gc_duration_seconds A summary of the pause duration of garbage collection cycles.
