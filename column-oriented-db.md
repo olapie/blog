@@ -1,5 +1,6 @@
 Clickhouse is a column oriented database, while MySQL, PostgreSQL are row oriented database.
 Clickhouse is a Relational Database and supports SQL.   
+Clickhouse is for OLAP(online analytical processing), while MySQL, PostgreSQL are OLTP.
 
 Same column of all records are stored together,   
 e.g. name:  tom:001, jim:002, lucy:003  
