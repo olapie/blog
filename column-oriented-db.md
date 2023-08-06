@@ -24,3 +24,18 @@ ClickHouse’s limitations / weaknesses include:
     Because data modification is asynchronous, ensuring consistent backups is difficult: the only way to ensure a consistent backup is to stop all writes to the database
     Lack of transactions and lack of data consistency also affects other features like materialized views, because the server can't atomically update multiple tables at once. If something breaks during a multi-part insert to a table with materialized views, the end result is an inconsistent state of your data.
 ```
+
+
+ClickHouse, PostgreSQL, and TimescaleDB architectures
+
+At a high level, ClickHouse is an excellent OLAP database designed for systems of analysis.
+
+PostgreSQL, by comparison, is a general-purpose database designed to be a versatile and reliable OLTP database for systems of record with high user engagement.
+
+TimescaleDB is a relational database for time-series: purpose-built on PostgreSQL for time-series workloads. It combines the best of PostgreSQL plus new capabilities that increase performance, reduce cost, and provide an overall better developer experience for time-series.
+
+So, if you find yourself needing to perform fast analytical queries on mostly immutable large datasets with few users, i.e., OLAP, ClickHouse may be the better choice.
+
+Instead, if you find yourself needing something more versatile, that works well for powering applications with many users and likely frequent updates/deletes, i.e., OLTP, PostgreSQL may be the better choice.
+
+And if your applications have time-series data - and especially if you also want the versatility of PostgreSQL - TimescaleDB is likely the best choice.
